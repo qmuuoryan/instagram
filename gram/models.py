@@ -2,9 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-# class NewsLetterRecipients(models.Model):
-#     name = models.CharField(max_length = 30)
-#     email = models.EmailField()
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,)
@@ -24,7 +22,7 @@ class Profile(models.Model):
             def __str__(self):
         return self.bio
 
-            def save_profile(self):
+    def save_profile(self):
         self.save()
         
     def update_profile(self):
