@@ -1,0 +1,61 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  
+        <nav class="navbar">
+            <section class="logo-section"><a href="/"><img class="logo" src="https://image.shutterstock.com/z/stock-photo-kiev-ukraine-october-new-instagram-logos-printed-on-paper-instagram-is-an-online-499761802.jpg" /></a>
+                <div></div><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png" />
+            </section>
+            
+            <form class="search-section" role="search" action="{% url 'search_users' %}">
+                <input class="input-search" type="search" name="user" placeholder="Search">
+            </form>
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                
+                    
+                            <a href="{% url 'images' %}">
+                                <i class="material-icons"> explore </i></a>
+                      
+                      &nbsp;  &nbsp;
+                            <a href="{% url 'images' %}">
+                                <i class="material-icons">
+                                    favorite_border
+                                    </i>
+                            </a>
+                      
+                            &nbsp;  &nbsp;
+
+                            <a href="{% url 'new_image' %}">
+                                <i class="material-icons" style="font-size:25px;">add_a_photo</i>
+                            </a>
+
+                            &nbsp;  &nbsp;
+                            <a href="individual_profile_page/">
+                                <i class="material-icons" style="font-size:25px">account_circle</i>
+                            </a>
+                            &nbsp; &nbsp; 
+       
+                      
+                    </ul>
+                </div>
+
+        
+            </div>
+
+        </nav>
+
+    </div> {% endcomment %}
+
+    

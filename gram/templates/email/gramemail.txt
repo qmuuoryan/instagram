@@ -1,0 +1,3 @@
+Hello, {{name}} Welcome to Instagram.
+
+Welcome to the Instagram, You can verify your accout succesfully,Thank you!! 
