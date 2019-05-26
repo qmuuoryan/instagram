@@ -1,0 +1,69 @@
+{% extends 'all-gram/base.html'%}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+{{block.super}}
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+{% for image in all_images %}
+<div class="panel" style="padding:5px;margin-left:-550px">
+    <img src="{{ image.image.url}}" class="img-responsive" style="width:500px; height: 100%;">
+    <p> {{image.image_caption}}</p>
+
+             
+</div>
+{% endfor %}
+</div>
+<hr>
+<div class="col-md-6">
+<p class="text-muted"> Follow other users</p>
+<div class="list">
+    <br>
+    {% for profile in all_users %}
+    {{profile.first_name}}
+    {% for pro in all_users %}
+    {% if user.username == profile.username%}
+    {%else%}
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a href="/viewprofile/{{pro.id}}" class="others"><strong class="list-inline">
+                    &nbsp;&nbsp;{{pro.first_name}} </strong>
+            </a>
+            <br>
+
+        </li>
+        
+        {% if profile in people %}
+        <li class="list-inline-item">
+            <a href="/unfollow/{{profile.id}}"><button class="btn btn-success btn-md">Following</button></a>
+        </li>
+        {% else %}
+        <li class="list-inline-item" style="margin-right:50px;">
+            <a href="/follow/{{profile.id}}"></a>
+                <button class="btn btn-success btn-md">Follow</button>
+        </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</div>
+</div>
+</div>
+</div>
+<style>
+.list{
+    overflow: scroll;
+    width: 200px;
+    height: 255px;
+    background: rgb(241,241,241);
+    margin-left: 900px;
+    margin-top: -2200px;
+    position: absolute;
+}
+</style>
+{% endblock %}
