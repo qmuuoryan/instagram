@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'friendship',
     'gram',
     'bootstrap4',
     'django.contrib.admin',
