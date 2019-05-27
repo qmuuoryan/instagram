@@ -42,10 +42,10 @@
             <a href="/unfollow/{{profile.id}}"><button class="btn btn-success btn-md">Following</button></a>
         </li>
         {% else %}
-        <li class="list-inline-item" style="margin-right:50px;">
+        {% comment %} <li class="list-inline-item" style="margin-right:50px;">
             <a href="/follow/{{profile.id}}"></a>
                 <button class="btn btn-success btn-md">Follow</button>
-        </li>
+        </li> {% endcomment %}
         {% endif %}
     </ul>
     {% endif %}
@@ -55,15 +55,5 @@
 </div>
 </div>
 </div>
-<style>
-.list{
-    overflow: scroll;
-    width: 200px;
-    height: 255px;
-    background: rgb(241,241,241);
-    margin-left: 900px;
-    margin-top: -2200px;
-    position: absolute;
-}
-</style>
+
 {% endblock %}
