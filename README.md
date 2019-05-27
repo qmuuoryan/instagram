@@ -12,7 +12,6 @@
 # Installation Requirements
 * Create folder on your computer to store the application.
 * Initialise git on the folder using the following command; $ git init
-* On your terminal,Run git clone https://github.com/beattykariuki/Insta-clone
 * On your terminal,Navigate to the created directory.
 * Run the following commands to allow functionality of the app:-
 * sudo apt-get update sudo apt-get install python3.6 python3.6 -m venv virtual source virtual/bin/activate
